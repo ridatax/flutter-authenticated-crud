@@ -1,4 +1,4 @@
-# flutter_authenticated_crud
+# teslo_shop
 
 A new Flutter project.
 

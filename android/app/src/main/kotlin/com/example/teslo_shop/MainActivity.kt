@@ -1,4 +1,4 @@
-package com.example.flutter_authenticated_crud
+package com.example.teslo_shop
 
 import io.flutter.embedding.android.FlutterActivity
 
