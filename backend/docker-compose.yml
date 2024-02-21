@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+
+  app:
+    container_name: nest-app
+    image: klerith/flutter-backend-teslo-shop:latest
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    environment:
+      APP_VERSION: 0.0.1
+      STAGE: prod
+      DB_PASSWORD: MySecr3tPassWord@as2
+      DB_NAME: TesloDB
+      DB_HOST: TesloDB
+      DB_PORT: 5432
+      DB_USERNAME: postgres
+      PORT: 3000
+      HOST_API: http://localhost:3000/api
+      JWT_SECRET: Est3EsMISE3Dsecreto32s
+  
+  db:
+    image: postgres:15.2
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: MySecr3tPassWord@as2
+      POSTGRES_DB: TesloDB
+    container_name: TesloDB
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+
+
+volumes:
+  postgres-db:
+    external: false

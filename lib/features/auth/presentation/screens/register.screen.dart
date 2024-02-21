@@ -123,7 +123,6 @@ class _RegisterForm extends StatelessWidget {
                   child: const Text('Ingresa aquí'))
             ],
           ),
-
           const Spacer(flex: 1),
         ],
       ),
