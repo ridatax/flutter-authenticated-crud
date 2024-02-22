@@ -11,10 +11,10 @@ class KeyValueStorageServiceImpl extends KeyValueStorageService {
     final prefs = await getSharedPrefs();
 
     switch (T) {
-      case int _:
+      case int:
         return prefs.getInt(key) as T?;
 
-      case String _:
+      case String:
         return prefs.getString(key) as T?;
 
       default:
@@ -33,11 +33,11 @@ class KeyValueStorageServiceImpl extends KeyValueStorageService {
     final prefs = await getSharedPrefs();
 
     switch (T) {
-      case int _:
+      case int:
         prefs.setInt(key, value as int);
         break;
 
-      case String _:
+      case String:
         prefs.setString(key, value as String);
         break;
 
